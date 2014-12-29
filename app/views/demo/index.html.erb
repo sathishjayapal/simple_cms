@@ -1,2 +1,8 @@
 <h1>Index#index</h1>
-<p>Index Hello World</p>
+<p>Index World</p>
+<%= link_to("hello", {:action=>'demoarray'})%>
+ID <%=params[:id] %></br>
+ID MEM VAR <%= @id%></br>
+Page <%= params[:page]%></br>
+next page <%= @page+1%></br>
+<%=params.inspect%></br>
