@@ -7,6 +7,7 @@ class AlterUsers < ActiveRecord::Migration
   	puts "****** adding admin_users"
   	add_index("admin_users", "username")
   end
+  say "This is a moving up"
   def down
   	remove_index("admin_users", "username")
   	remove_column("admin_users","hashed_password","password")
