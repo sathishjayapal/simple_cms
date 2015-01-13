@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'subjects/index'
+
+  get 'subjects/show'
+
+  get 'subjects/new'
+
+  get 'subjects/edit'
+
+  get 'subjects/delete'
+
   # get 'demo/index'
   match  ':controller(/:action(/:id))', :via => :get
   # The priority is based upon order of creation: first created -> highest priority.
