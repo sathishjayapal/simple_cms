@@ -1,7 +1,7 @@
 class CreateSubjects < ActiveRecord::Migration
   def up
     create_table :subjects do |t|
-	t.string "name", :null => false, :limit => 35
+	  t.string "name", :null => false, :limit => 35
   	t.integer "position", :null => false
   	t.boolean "visible", :default => false
   	t.timestamps
