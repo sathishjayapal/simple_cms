@@ -16,7 +16,6 @@ class SubjectsController < ApplicationController
     if params[:subject].nil?
       render('new')
       else
-    
      @subject= Subject.new(subject_params)
     
     if @subject.save
@@ -25,9 +24,9 @@ class SubjectsController < ApplicationController
     else
       render('new')
     end
+  end
+end
   
-  end
-  end
 
   def edit
     @subject = Subject.find(params[:id])
