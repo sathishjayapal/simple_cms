@@ -7,16 +7,18 @@
 <th>name</th>
 <th>position</th>
 <th>visible</th>
-<th>content_type</th>
-<th>content</th>
+<th>contenttype</th>
+<th>page_id</th>
 </tr>
 <%@sections.each do |section|%>
 <tr>
-<td><%=section.page_id%></td>
-<td><%=section.position%></td>
+<td><%=section.id%></td>
+
 <td><%=section.name%></td>
+<td><%=section.position%></td>
 <td class="center"><%=section.visible ? 'Yes' : 'No' %></td>
-<td class="center"><%=section.content %></td>
+<td class="center"><%=section.content_type %></td>
+<td><%=section.page_id%></td>
 <td class="actions">
 	<%=link_to("Show", {:action => 'show', :id => section.page_id}, :class => 'action show')%>
 	<%=link_to("Edit", {:action => 'edit', :id => section.page_id}, :class => 'action edit')%>
