@@ -1,10 +1,11 @@
+<% @page_title= "Pages" %>
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
 <div class="Page show">
   <h2>Show Page</h2>
 
   <table summary="Page detail view">
-   <tr>
+    <tr>
       <th>id</th>
       <td><%= @page.id %></td>
     </tr>
@@ -20,14 +21,14 @@
       <th>Visible?</th>
       <td><%= @page.visible ? 'true' : 'false' %></td>
     </tr>
-      <tr>
-        <th>Content type</th>
-        <td><%= @page.subject_id %></td>
-      </tr>
-        <tr>
-        <th>Content</th>
-        <td><%= @page.permalink %></td>
-      </tr>
+    <tr>
+      <th>Content type</th>
+      <td><%= @page.subject_id %></td>
+    </tr>
+    <tr>
+      <th>Content</th>
+      <td><%= @page.permalink %></td>
+    </tr>
     <tr>
       <th>Created</th>
       <td><%= @page.created_at %></td>

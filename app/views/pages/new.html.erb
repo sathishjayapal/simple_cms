@@ -1,36 +1,14 @@
+<% @page_title= "Pages" %>
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
-<div class="Page edit">
-  <h2>update Page</h2>
+<div class="Page new">
+  <h2>New Page</h2>
 
-  <%= form_for(:page, :url => {:action => 'update',:id=>@page.id}) do |f| %>
-
-    <table summary="Page form fields">
-      <tr>
-        <th>Name</th>
-        <td><%= f.text_field(:name) %></td>
-      </tr>
-      <tr>
-        <th>Position</th>
-        <td><%= f.text_field(:position) %></td>
-      </tr>
-      <tr>
-        <th>Visible</th>
-        <td><%= f.text_field(:visible) %></td>
-      </tr>
-         <tr>
-        <th>Subject ID</th>
-        <td><%= f.text_field(:subject_id) %></td>
-      </tr>
-        <tr>
-        <th>PermaLink</th>
-        <td><%= f.text_field(:permalink) %></td>
-      </tr>
-    </table>
-
-    <div class="form-buttons">
-      <%= submit_tag("Update page") %>
-    </div>
+  <%= form_for(:page, :url => {:action => 'create' })  do |f| %>
+      <%= render(:partial => "form", :locals => {:f => f}) %>
+      <div class="form-buttons">
+        <%= submit_tag("Create page") %>
+      </div>
 
   <% end %>
 </div>

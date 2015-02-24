@@ -1,10 +1,11 @@
+<% @page_title= "Subjects" %>
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
 <div class="subjects show">
   <h2>Show Subject</h2>
 
   <table summary="Subject detail view">
-   <tr>
+    <tr>
       <th>id</th>
       <td><%= @subject.id %></td>
     </tr>
@@ -18,7 +19,7 @@
     </tr>
     <tr>
       <th>Visible?</th>
-      <td><%= @subject.visible ? 'true' : 'false' %></td>
+      <td><%= status_tag(@subject.visible)%></td>
     </tr>
     <tr>
       <th>Created</th>
